@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, CssBaseline,Paper, ThemeProvider, createTheme } from '@mui/material';
+import HomeScreen from './screens/HomeScreen';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import DineLocation from './screens/DineLocation';
+import Order from './screens/Order';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#f44336',
+    },
+    secondary: {
+      main: '#3f51b5',
+    },
+  },
+});
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth="sm">
+          <Paper>
+            <Routes>
+              <Route path="/" Component={HomeScreen} />
+              <Route path="/DineLocation" Component={DineLocation}/>
+              <Route path="/Order" Component={Order}/>
+            </Routes>
+          </Paper>
+        </Container>
+      </ThemeProvider>
+    </BrowserRouter>
+    
   );
 }
 
