@@ -16,8 +16,8 @@ const theme = createTheme({
 });
 function App() {
   return (
-    <BrowserRouter>
       <ThemeProvider theme={theme}>
+    <BrowserRouter>
         <CssBaseline />
         <Container maxWidth="sm">
           <Paper>
@@ -28,8 +28,8 @@ function App() {
             </Routes>
           </Paper>
         </Container>
-      </ThemeProvider>
     </BrowserRouter>
+      </ThemeProvider>
     
   );
 }

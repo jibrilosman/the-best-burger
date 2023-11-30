@@ -1,22 +1,27 @@
 import { makeStyles } from "@mui/styles";
 import BG from './assets/BG-2.png';
+import CatBG from './assets/categoryBG.png';
 
 export const useStyles = makeStyles((theme) => ({
+
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
     root: {
       height: '100',
       display: 'flex',
       flexDirection: 'column',
-      overflow: 'hidden',
     },
     imgBG: {
       background: `url(${BG}) no-repeat center center fixed`,
     },
     main: {
       flex: '1',
-      overflow: 'hidden',
-      overflowX: 'hidden',
-      display: 'flex',
+      overflow: 'auto',
       flexDirection: 'column',
+      display: 'flex',
     },
     center: {
       display: 'flex',
@@ -53,6 +58,30 @@ export const useStyles = makeStyles((theme) => ({
         padding: '10px',
       },
       media: {
-        width: '200px',
+        width: '100px',
       },
+      top_banner: {
+        width: '100%',
+        height: '100px',
+      },
+      catBG: {
+        height: '100%',
+        backgroundColor: '#FFE600',
+        background: `url(${CatBG}) no-repeat`,
+        backgroundSize: 'cover',
+      },
+     
+      catName: {
+        color: '#FFE600',
+        fontWeight: '600',
+        fontFamily: 'League Spartan, sans-serif',
+        fontSize: '20px',
+        textAlign: 'center',
+        padding: '10px',
+        // margin: '10px',
+        backgroundColor: '#000',
+        borderRadius: '5px',
+      },
+      
+      
 }));
