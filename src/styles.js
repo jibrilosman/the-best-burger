@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
     root: {
-      height: '100',
+      height: '100vh',
       display: 'flex',
       flexDirection: 'column',
     },
@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     main: {
       flex: '1',
-      overflow: 'auto',
+      // overflow: 'auto',
       flexDirection: 'column',
       display: 'flex',
     },
@@ -28,6 +28,23 @@ export const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       justifyContent: 'center',
       textAlign: 'center',
+    },
+    row: {
+      display: 'flex',
+      padding: 10,
+    },
+    dialog: {
+      backgroundColor: 'rgba(255,255,255,0.7)',
+      // backgroundColor: '#FFE600',
+      // background: `url(${CatBG}) no-repeat`,
+      // backgroundSize: 'cover',
+      zIndex: 1000,
+    },
+    bordered: {
+      borderWidth: 2,
+      borderRadius: 5,
+      margin: 5,
+      borderStyle: 'solid',
     },
     white: {
       color: '#fff',
@@ -56,6 +73,8 @@ export const useStyles = makeStyles((theme) => ({
       },
       space: {
         padding: '10px',
+        display: 'flex',
+        justifyContent: 'space-around',
       },
       media: {
         width: '100px',
@@ -83,5 +102,67 @@ export const useStyles = makeStyles((theme) => ({
         borderRadius: '5px',
       },
       
-      
+      catPrice: {
+        color: '#FFE600',
+        fontWeight: '600',
+        fontFamily: 'League Spartan, sans-serif',
+        fontSize: '20px',
+        textAlign: 'center',
+        padding: '5px',
+        // margin: '10px',
+        backgroundColor: '#000',
+        borderRadius: '5px',
+      },
+      cancelButton: {
+        backgroundColor: '#000',
+        color: '#FFE600',
+        fontWeight: '600',
+        fontFamily: 'League Spartan, sans-serif',
+        fontSize: '20px',
+        textAlign: 'center',
+        padding: '5px',
+        // margin: '10px',
+        borderRadius: '5px',
+        cursor: 'pointer',
+      },
+      checkoutButton: {
+        backgroundColor: '#000',
+        color: '#FFE600',
+        fontWeight: '600',
+        fontFamily: 'League Spartan, sans-serif',
+        fontSize: '20px',
+        textAlign: 'center',
+        padding: '5px',
+        // margin: '10px',
+        borderRadius: '5px',
+        cursor: 'pointer',
+      },
+      span: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+      },
+      largeInput: {
+        width: '50px!important',
+        padding: '0!important',
+        fontSize: '25px!important',
+        textAlign: 'center!important',
+      },
+      navy: {
+         backgroundColor: 'rgba(255, 230, 0, 1)',
+         background: `url(${CatBG}) no-repeat`,
+         backgroundSize: 'cover',
+      },
+      selectPayment: {
+        // backgroundColor: 'rgba(255, 230, 0, 1)',
+        background: `url(${CatBG}) no-repeat`,
+        backgroundSize: 'cover',
+     },
+      column: {
+        flexDirection: 'column',
+      },
+      between: {
+        justifyContent: 'space-between',
+      },
+
 }));
