@@ -72,7 +72,7 @@ const CompleteScreen = () => {
                 variant="contained"
                 color="primary"
                 fullWidth
-                onClick={() => navigate('/order')}
+                onClick={() => navigate('/dinelocation')}
                 style={{background:'#000',color:'#FFE600'}}
               >
                 Order Again
